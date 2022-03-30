@@ -28,19 +28,5 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(this, difficultyPage.class);
         startActivity(intent);
     }
-    public void showRules(View v){
-        RelativeLayout popup;
-        popup = (RelativeLayout) findViewById(R.id.rulesPopup);
-        if (popup.getVisibility() == View.GONE) {
-            popup.setVisibility(View.VISIBLE);
-        }
-    }
 
-    public void hideRules(View v){
-        RelativeLayout popup;
-        popup = (RelativeLayout) findViewById(R.id.rulesPopup);
-        if (popup.getVisibility() == View.VISIBLE) {
-            popup.setVisibility(View.GONE);
-        }
-    }
 }
