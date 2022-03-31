@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity
+            android:name=".loginPage"
+            android:exported="false" />
+        <activity
             android:name=".difficultyPage"
             android:exported="false" />
         <activity

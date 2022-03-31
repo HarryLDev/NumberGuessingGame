@@ -5,13 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.RelativeLayout;
 
 public class difficultyPage extends AppCompatActivity {
 //    private Button easyB;
 //    private Button normalB;
 //    private Button hardB;
-//    private Button loginB;
+    private Button loginB;
 //    private Button leaderboardB;
 //    private Button helpB;
 
@@ -20,6 +21,13 @@ public class difficultyPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_difficulty_page);
+        loginB = (Button) findViewById(R.id.button);
+        loginB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLoginPage();
+            }
+        });
     }
 
     public void showRules(View v){
@@ -50,10 +58,10 @@ public class difficultyPage extends AppCompatActivity {
 //        Intent intent = new Intent(this, gamePage.class);
 //        startActivity(intent);
 //    }
-//    public void openLoginPage(){
-//        Intent intent = new Intent(this, loginPage.class);
-//        startActivity(intent);
-//    }
+    public void openLoginPage(){
+        Intent intent = new Intent(this, loginPage.class);
+        startActivity(intent);
+    }
 //    public void openLeaderboardPage(){
 //        Intent intent = new Intent(this, leaderboardPage.class);
 //        startActivity(intent);
