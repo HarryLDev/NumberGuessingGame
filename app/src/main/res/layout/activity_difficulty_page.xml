@@ -101,10 +101,10 @@
             android:layout_marginTop="40dp"
             android:layout_marginEnd="30dp"
             android:layout_marginBottom="50dp"
-            android:text=" \n lsdfkmsv"
+            android:text=" Welcome To Number Genie\n In this game you will need to guess a number depending on your difficulty. \n  There are three modes of difficulty: \n 1)Easy Mode \n 1-10 with 6 lives\n2)Normal Mode\n1-30 with 5 lives\n3)Hard Mode\n1-100 with 3 lives\nWhen number is guessed correctly a new number will be generated. If you run out of lives it is game over  "
             android:textAlignment="center"
             android:textColor="#000000"
-            android:textSize="22sp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/rules_done_btn"
