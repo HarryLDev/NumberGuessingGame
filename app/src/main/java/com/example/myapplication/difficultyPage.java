@@ -21,7 +21,7 @@ public class difficultyPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_difficulty_page);
-        loginB = (Button) findViewById(R.id.button);
+        loginB = (Button) findViewById(R.id.LoginButton);
         loginB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
