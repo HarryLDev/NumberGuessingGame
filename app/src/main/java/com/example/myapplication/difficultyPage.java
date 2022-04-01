@@ -40,13 +40,13 @@ public class difficultyPage extends AppCompatActivity {
 //                openEasyPage();
 //            }
 //        });
-        hardB = (Button) findViewById(R.id.LoginButton);
-        hardB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openLoginPage();
-            }
-        });
+//        hardB = (Button) findViewById(R.id.LoginButton);
+//        hardB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openHardPage();
+//            }
+//        });
     }
 
     public void showRules(View v){
