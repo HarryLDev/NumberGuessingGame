@@ -9,12 +9,10 @@ import android.widget.Button;
 import android.widget.RelativeLayout;
 
 public class difficultyPage extends AppCompatActivity {
-//    private Button easyB;
-//    private Button normalB;
-//    private Button hardB;
+    private Button easyB;
+    private Button normalB;
+    private Button hardB;
     private Button loginB;
-//    private Button leaderboardB;
-//    private Button helpB;
 
 
     @Override
@@ -23,6 +21,27 @@ public class difficultyPage extends AppCompatActivity {
         setContentView(R.layout.activity_difficulty_page);
         loginB = (Button) findViewById(R.id.LoginButton);
         loginB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openLoginPage();
+            }
+        });
+//        normalB = (Button) findViewById(R.id.LoginButton);
+//        normalB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openNormalPage();
+//            }
+//        });
+//        easyB = (Button) findViewById(R.id.LoginButton);
+//        easyB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                openEasyPage();
+//            }
+//        });
+        hardB = (Button) findViewById(R.id.LoginButton);
+        hardB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 openLoginPage();
@@ -47,27 +66,19 @@ public class difficultyPage extends AppCompatActivity {
     }
 
 //    public void openEasyPage(){
-//        Intent intent = new Intent(this, gamePage.class);
+//        Intent intent = new Intent(this, GuessTheNumber.class);
 //        startActivity(intent);
 //    }
 //    public void openNormalPage(){
-//        Intent intent = new Intent(this, gamePage.class);
+//        Intent intent = new Intent(this, GuessTheNumber.class);
 //        startActivity(intent);
 //    }
 //    public void openHardPage(){
-//        Intent intent = new Intent(this, gamePage.class);
+//        Intent intent = new Intent(this, GuessTheNumber.class);
 //        startActivity(intent);
 //    }
     public void openLoginPage(){
         Intent intent = new Intent(this, loginPage.class);
         startActivity(intent);
     }
-//    public void openLeaderboardPage(){
-//        Intent intent = new Intent(this, leaderboardPage.class);
-//        startActivity(intent);
-//    }
-//    public void helpPage(){
-//        Intent intent = new Intent(this, helpPage.class);
-//        startActivity(intent);
-//    }
 }
