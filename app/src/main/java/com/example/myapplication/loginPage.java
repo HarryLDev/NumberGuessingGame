@@ -12,6 +12,8 @@ public class loginPage extends AppCompatActivity {
     private Button submitB;
     private EditText nameInput;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
