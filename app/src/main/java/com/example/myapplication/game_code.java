@@ -14,7 +14,7 @@ import java.util.concurrent.ThreadLocalRandom;
 public class game_code extends AppCompatActivity {
 
 
-    private String username;
+    private String username = loginPage.name;
     private int points;
     private static double pointsMultiplier;
     private static int randomNumber;
@@ -111,6 +111,7 @@ public class game_code extends AppCompatActivity {
         TextView livesLeft = (TextView) findViewById(R.id.guessesLeft);
         TextView guessesLeft = (TextView) findViewById(R.id.numOfGuesses);
         TextView userName = (TextView) findViewById(R.id.Username);
+        userName.setText(username);
 
         guessButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -120,7 +121,6 @@ public class game_code extends AppCompatActivity {
                 afterGuessMessage.setText(checkGuess(guessInt));
                 livesLeft.setText(getLives());
                 guessesLeft.setText(getGuessed());
-//                userName.setText(name);
             }
         });
 

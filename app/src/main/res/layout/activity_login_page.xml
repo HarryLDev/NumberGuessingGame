@@ -10,7 +10,7 @@
         android:id="@+id/EnterNamePrompt"
         android:layout_width="364dp"
         android:layout_height="29dp"
-        android:text="Please Enter Name to be put on Scoreboard:"
+        android:text="Please Enter Name:"
         android:textSize="18dp"
         app:layout_constraintBottom_toTopOf="@+id/PersonName"
         app:layout_constraintEnd_toEndOf="parent"
