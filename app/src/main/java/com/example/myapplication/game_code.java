@@ -2,10 +2,12 @@ package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Button;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -113,18 +115,38 @@ public class game_code extends AppCompatActivity {
         TextView userName = (TextView) findViewById(R.id.Username);
         userName.setText(username);
 
-        guessButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                guess = guessInput.getText().toString();
-                guessInt = Integer.parseInt(guess);
-                afterGuessMessage.setText(checkGuess(guessInt));
-                livesLeft.setText(getLives());
-                guessesLeft.setText(getGuessed());
-            }
-        });
+
+            guessButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    if(lives>0) {
+                        guess = guessInput.getText().toString();
+                        guessInt = Integer.parseInt(guess);
+                        afterGuessMessage.setText(checkGuess(guessInt));
+                        livesLeft.setText(getLives());
+                        guessesLeft.setText(getGuessed());
+                    }
+                    else if(lives==0){
+                        RelativeLayout popup;
+                        popup = (RelativeLayout) findViewById(R.id.gameOverPopUp);
+                        if (popup.getVisibility() == View.GONE) {
+                            popup.setVisibility(View.VISIBLE);
+                        }
+                    }
+                }
+            });
 
 
+
+
+    }
+    public void playAgain(View view){
+        Intent intent = new Intent(this, difficultyPage.class);
+        startActivity(intent);
+    }
+    public void mainMenu(View view){
+        Intent intent = new Intent(this, MainActivity.class);
+        startActivity(intent);
     }
 
 }

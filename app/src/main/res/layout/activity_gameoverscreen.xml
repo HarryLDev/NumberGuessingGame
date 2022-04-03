@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#EDC281">
+    android:background="#EDC281"
+    tools:context=".gameOverScreen">
 
 
     <Button
@@ -13,7 +14,6 @@
         android:layout_height="47dp"
         android:layout_marginTop="40dp"
         android:backgroundTint="#050505"
-        android:onClick="hideRules"
         android:text="Main Menu"
         android:textColor="#FDD991"
         app:layout_constraintEnd_toEndOf="parent"
