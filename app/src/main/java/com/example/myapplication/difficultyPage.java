@@ -16,6 +16,11 @@ public class difficultyPage extends AppCompatActivity {
     private Button loginB;
 
 
+//    private Button helpB;
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
