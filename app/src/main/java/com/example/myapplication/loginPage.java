@@ -8,9 +8,11 @@ import android.widget.Button;
 import android.widget.EditText;
 
 public class loginPage extends AppCompatActivity {
-    public String name;
+    public static String name;
     private Button submitB;
     private EditText nameInput;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
