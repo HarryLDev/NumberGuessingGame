@@ -13,7 +13,7 @@ public class difficultyPage extends AppCompatActivity {
 //    private Button normalB;
 //    private Button hardB;
     private Button loginB;
-//    private Button leaderboardB;
+
 //    private Button helpB;
 
 

@@ -10,6 +10,7 @@ import android.widget.RelativeLayout;
 
 public class MainActivity extends AppCompatActivity {
     private Button startButton;
+    private Button mainmenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,11 +24,21 @@ public class MainActivity extends AppCompatActivity {
                 openDifficultyPage();
             }
         });
+        mainmenu = (Button) findViewById(R.id.returnMainMenu);
+        mainmenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openDifficultyPage();
+            }
+        });
     }
     public void openDifficultyPage(){
         Intent intent = new Intent(this, difficultyPage.class);
         startActivity(intent);
     }
 
+
     }
+
+
 
