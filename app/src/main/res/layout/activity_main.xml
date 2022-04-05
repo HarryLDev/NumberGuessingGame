@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#673AB7"
     tools:context=".MainActivity">
 
     <Button
@@ -12,6 +13,8 @@
         android:layout_height="123dp"
         android:fontFamily="@font/aladin"
         android:text="Start"
+        android:background="#E91E63"
+        android:textColor="#FFC107"
         android:textSize="34sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -26,6 +29,7 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/aladin"
         android:text="Number Genie"
+        android:textColor="#FFC107"
         android:textSize="80sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

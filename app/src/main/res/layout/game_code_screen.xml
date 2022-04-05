@@ -3,6 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#673AB7"
     android:layout_height="match_parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -12,17 +13,20 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".MainActivity"
-            tools:layout_editor_absoluteX="-30dp"
-            tools:layout_editor_absoluteY="-143dp">
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:context=".MainActivity">
 
             <TextView
                 android:id="@+id/Title"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/aladin"
                 android:text="@string/Title"
-                android:textColor="@color/black"
-                android:textSize="24sp"
+                android:textColor="#FFC107"
+                android:textSize="48sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
@@ -31,9 +35,9 @@
                 android:id="@+id/gameOverPopUp"
                 android:layout_width="350dp"
                 android:layout_height="500dp"
+                android:background="#673AB7"
                 android:elevation="5dp"
                 android:visibility="gone"
-                android:background="@color/white"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -49,37 +53,50 @@
                     android:layout_marginTop="40dp"
                     android:layout_marginEnd="30dp"
                     android:layout_marginBottom="50dp"
+                    android:fontFamily="@font/aladin"
                     android:text="Game Over \n"
                     android:textAlignment="center"
-                    android:textColor="#000000"
-                    android:textSize="18sp" />
+                    android:textColor="#FFC107"
+                    android:textSize="60sp" />
 
                 <Button
                     android:id="@+id/playAgainBtn"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/text3"
-                    android:layout_centerHorizontal="true"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="160dp"
-                    android:layout_marginEnd="30dp"
+                    android:layout_width="200dp"
+                    android:layout_height="111dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true"
+                    android:layout_marginStart="75dp"
+                    android:layout_marginEnd="75dp"
                     android:layout_marginBottom="30dp"
-                    android:backgroundTint="#85898F"
+                    android:background="#E91E63"
+                    android:fontFamily="@font/aladin"
                     android:onClick="playAgain"
-                    android:text="Play Again" />
+                    android:text="Play Again"
+                    android:textColor="#FFC107"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/mainMenuBtn"
-                    android:layout_width="150dp"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/playAgainBtn"
+                    android:layout_width="200dp"
+                    android:layout_height="111dp"
+                    android:layout_above="@+id/playAgainBtn"
                     android:layout_centerHorizontal="true"
                     android:layout_marginStart="30dp"
                     android:layout_marginEnd="30dp"
-                    android:layout_marginBottom="30dp"
-                    android:backgroundTint="#85898F"
+                    android:layout_marginBottom="59dp"
+                    android:background="#E91E63"
+                    android:fontFamily="@font/aladin"
                     android:onClick="mainMenu"
-                    android:text="Main Menu" />
+                    android:text="Main Menu"
+                    android:textColor="#FFC107"
+                    android:textSize="30sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <TextView
                     android:id="@+id/textView3"
@@ -89,7 +106,9 @@
                     android:layout_below="@+id/text3"
                     android:layout_marginTop="-85dp"
                     android:layout_marginBottom="226dp"
-                    android:text="TextView" />
+                    android:fontFamily="@font/aladin"
+                    android:text="TextView"
+                    android:textColor="#FFC107" />
 
             </RelativeLayout>
 
@@ -97,8 +116,10 @@
                 android:id="@+id/description"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/aladin"
                 android:text="@string/Game_Description"
-                android:textColor="@color/black"
+                android:textColor="#FFC107"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.498"
@@ -112,24 +133,36 @@
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/description" />
 
             <Button
                 android:id="@+id/guessButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="124dp"
+                android:layout_height="71dp"
+                android:background="#E91E63"
+                android:fontFamily="@font/aladin"
                 android:text="@string/GuessButton"
+                android:textColor="#FFC107"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/guessInput" />
+                app:layout_constraintTop_toBottomOf="@+id/guessInput"
+                app:layout_constraintVertical_bias="0.059"
+                tools:ignore="MissingConstraints" />
 
             <TextView
                 android:id="@+id/HigherLower"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/aladin"
                 android:text="@string/HigherOrLower"
+                android:textColor="#FFC107"
+                android:textSize="24sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -140,17 +173,23 @@
                 android:id="@+id/Username"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="4dp"
+                android:layout_marginTop="8dp"
+                android:fontFamily="@font/aladin"
                 android:text="TextView"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/Title" />
+                android:textColor="#FFC107"
+                android:textSize="20sp"
+                app:layout_constraintTop_toBottomOf="@+id/Title"
+                tools:ignore="MissingConstraints"
+                tools:layout_editor_absoluteX="175dp" />
 
             <TextView
                 android:id="@+id/guessesLeft"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/aladin"
                 android:text="TextView"
+                android:textColor="#FFC107"
+                android:textSize="20sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -161,7 +200,10 @@
                 android:id="@+id/numOfGuesses"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@font/aladin"
                 android:text="TextView"
+                android:textColor="#FFC107"
+                android:textSize="20sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/guessesLeft" />
