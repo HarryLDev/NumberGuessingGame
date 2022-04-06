@@ -16,4 +16,7 @@
     <string name="EnterNumber">Enter Integer</string>
     <string name="GuessButton">GUESS!</string>
     <string name="HigherOrLower">Higher or Lower?</string>
+
+    //game screen
+    <string name="finalScore">!</string>
 </resources>

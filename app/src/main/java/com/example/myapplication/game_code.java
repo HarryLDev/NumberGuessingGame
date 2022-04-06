@@ -125,14 +125,14 @@ public class game_code extends AppCompatActivity {
             guessButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    if(lives>0) {
+                    if(lives>1) {
                         guess = guessInput.getText().toString();
                         guessInt = Integer.parseInt(guess);
                         afterGuessMessage.setText(checkGuess(guessInt));
                         livesLeft.setText(getLives());
                         guessesLeft.setText(getGuessed());
                     }
-                    else if(lives==0){
+                    else if(lives==1){
                         RelativeLayout popup;
                         popup = (RelativeLayout) findViewById(R.id.gameOverPopUp);
                         if (popup.getVisibility() == View.GONE) {
