@@ -17,12 +17,11 @@ public class game_code extends AppCompatActivity {
 
 
     private String username = loginPage.name;
-    private int points;
+    private static int points;
     private static double pointsMultiplier;
     private static int randomNumber;
     private static int lives;
     private static int guessed;
-    final static private int lowerLimit = 0;
     private static int upperLimit;
 
 
@@ -31,10 +30,13 @@ public class game_code extends AppCompatActivity {
         return ThreadLocalRandom.current().nextInt(min, max + 1);
     }
     public String getGuessed(){
-        return "You have used " + guessed + " guesses";
+        return "You have gained " + points + " points";
     }
     public String getLives(){
         return "You have " + lives + " lives left";
+    }
+    public static int getPoints(){
+        return points;
     }
 
 
@@ -47,6 +49,7 @@ public class game_code extends AppCompatActivity {
         guessed = 0;
         upperLimit = 10;
         pointsMultiplier = 1;
+        points = 0;
     }
 
     public static void  startMediumDifficulty(){
@@ -55,6 +58,7 @@ public class game_code extends AppCompatActivity {
         guessed = 0;
         upperLimit = 30;
         pointsMultiplier = 2.5;
+        points = 0;
     }
 
     public static void startHardDifficulty(){
@@ -63,6 +67,7 @@ public class game_code extends AppCompatActivity {
         guessed = 0;
         upperLimit = 100;
         pointsMultiplier = 5;
+        points = 0;
     }
 
     public int getChosenNumber(){
@@ -72,7 +77,8 @@ public class game_code extends AppCompatActivity {
     public String checkGuess(int guess){
         if(guess == randomNumber){
             guessed++;
-            points+= guessed*pointsMultiplier;
+            points+= pointsMultiplier;
+            randomNumber = getRandomNumber(0, upperLimit);
             return "Your guess is RIGHT!!!";
         }
         else{
